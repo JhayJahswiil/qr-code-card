@@ -3,10 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow: hidden;
   font-family: "Outfit", sans-serif;
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -68,7 +71,7 @@ body {
   font-size: 11px;
   text-align: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 9px;
 }
 .attribution a {
   color: #3e52a3;

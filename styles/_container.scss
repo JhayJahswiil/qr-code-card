@@ -2,6 +2,7 @@
 @use 'mixins' as m;
 
 body{
+    position: relative;
     width: 100%;
     height: 100vh;
     @include m.flexbox( $direction: column);
@@ -63,7 +64,7 @@ body{
     font-size: 11px; 
     text-align: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 9px;
 
     & a{
         color: #3e52a3
