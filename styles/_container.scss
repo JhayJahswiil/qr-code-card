@@ -1,0 +1,71 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+body{
+    width: 100%;
+    height: 100vh;
+    @include m.flexbox( $direction: column);
+    background-color: v.$ligh-gray;
+}
+
+// CONTAINER
+.container{
+    width: 300px;
+    background-color: v.$white;
+    padding: 16px;
+    border-radius: 10px;
+
+    // container__barcode
+    &__barcode{
+        width: 100%;
+        @include m.flexbox;
+
+        & img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    // container__texts
+    &__texts{
+        margin-top: 15px;
+        padding: 0 10px 20px;
+        text-align: center;
+
+        & h3{
+            font-weight: v.$fnt-wt-700;
+            color: v.$dark-blue;
+
+            @include m.media(280px){
+                font-size: 17px;
+            }
+        }
+
+        & p{
+            font-weight: v.$fnt-wt-400;
+            font-size: v.$font-size;
+            margin-top: 12px;
+            color: v.$grayish-blue;
+        }
+
+        @include m.media(280px){
+            padding: 0 2px 20px;
+        }
+    }
+
+    @include m.media(375px){
+        width: 90%;
+    }
+}
+
+// ATTRUBUTION
+.attribution{
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+
+    & a{
+        color: #3e52a3
+    }
+}
